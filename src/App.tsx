@@ -1,9 +1,5 @@
-import './App.css'
+import HomeBody from "./components/HomeBody";
 
 export default function App() {
-
-  return (
-    <h1>olá mundo</h1>
-  )
+  return <HomeBody />;
 }
-
