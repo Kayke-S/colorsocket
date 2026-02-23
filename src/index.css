@@ -2,6 +2,7 @@
 :root {
   --bg-color-primary: #202020;
   --bg-color-secondary: #fffafa;
+  --bg-color-tertiary: #dfdfdf;
 }
 
 * {
@@ -48,6 +49,7 @@ h1 {
 
 .cs-card-container {
   width: 100%;
+  box-shadow: 0 0 10px 1px white;
   padding: 20px;
   background-color: var(--bg-color-secondary);
   border-radius: 15px;

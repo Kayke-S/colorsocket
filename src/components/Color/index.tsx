@@ -1,8 +1,8 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
+import type { ColorDTO } from "../../model/color";
 import "./styles.css";
 
 type Props = {
-  data: any;
+  data: ColorDTO;
   isLast: boolean;
   index: number;
   onClick: (index: number) => void;
@@ -14,8 +14,11 @@ export default function Color({ data, onClick, index, isLast }: Props) {
       onClick={() => onClick(index)}
       className="cs-color-card"
       style={{
-        background: !data.isActive ? data.color : "#bebebe",
+        background: !data.isActive
+          ? `rgb(${data.color.red},${data.color.green}, ${data.color.blue} )`
+          : "#bebebe",
         marginRight: isLast ? 0 : 8,
+        transition: "0.4s",
       }}
     />
   );
